@@ -29,7 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/disimg"
-        android:layout_above="@id/bck1"
         android:background="@drawable/square"
         android:layout_margin="10dp"
         >

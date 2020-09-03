@@ -52,12 +52,14 @@ public class imagedis extends AppCompatActivity {
                 obj obj = response.body();
                 int i = 0;
                 assert obj != null;
-                for(; i<obj.getCollectio().getItem().size() ; i++ ){
+                for(;i<obj.getCollectio().getItem().size() ; i++ ){
                     String x = obj.getCollectio().getItem().get(i).getHref();
+                    if(x.endsWith("medium.jpg")){
                         disp.setVisibility(View.VISIBLE);
-                    Glide.with(imagedis.this).load(x).into(disp);
+                        Glide.with(imagedis.this).load(x.replace("http" , "https")).into(disp);
+                        break;
+                    }
                 }
-
                 title.setVisibility(View.VISIBLE);
                 description.setVisibility(View.VISIBLE);
                 title.setText(title1);
