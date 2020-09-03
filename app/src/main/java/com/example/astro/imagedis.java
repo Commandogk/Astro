@@ -42,6 +42,7 @@ public class imagedis extends AppCompatActivity {
                 .build();
         json json1 = retrofit.create(json.class);
         Call<obj> call = json1.getimg(nasa_id);
+        
         call.enqueue(new Callback<obj>() {
             @Override
             public void onResponse(Call<obj> call, Response<obj> response) {
